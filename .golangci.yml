@@ -1,0 +1,11 @@
+version: "2"
+
+linters:
+  default: standard
+  enable:
+    - misspell
+  exclusions:
+    rules:
+      - linters: [errcheck]
+        path: _test\.go
+        text: "Error return value of .os.RemoveAll. is not checked"
